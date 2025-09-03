@@ -15,6 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def hello():
+    return {"message": "Hello from LLM Compare Backend 🚀"}
+
+
 @app.get("/models")
 def get_models(user=Depends(verify_token)):
     return {
