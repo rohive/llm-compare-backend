@@ -10,7 +10,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For MVP, allow all. Later restrict to frontend domain.
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://llm-compare.vercel.app"  # Your Vercel frontend URL
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
