@@ -2,10 +2,10 @@ import os, time
 from app.models import ModelResponse
 import openai
 import anthropic
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load variables from .env
-load_dotenv()
+#load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
